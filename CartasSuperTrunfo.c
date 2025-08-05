@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-
 int main()
 {
     // ====== Declarção da Variaveis ==========//
@@ -83,10 +80,10 @@ int main()
     densidadepopulacionalcd2 = (float)populacaoCidade2 / areacd2;
     densidadeinversacd1 = areacd1 / (float)populacaoCidade1;
     densidadeinversacd2 = areacd2 / (float)populacaoCidade2;
-    pibpercaptadc1 = (float)pibcd1 / populacaoCidade1;
-    pibpercaptadc2 = (float)pibcd2 / populacaoCidade2;
+    pibpercaptadc1 = (pibcd1 * 1000000000.0f) / populacaoCidade1;
+    pibpercaptadc2 = (pibcd2* 1000000000.0f)/ populacaoCidade2;
     superpodercarta1 = (float)nptcd1 + (float)populacaoCidade1 + pibcd1 + pibpercaptadc1 + areacd1 + densidadeinversacd1;
-    superpodercarta2 = nptcd2 + populacaoCidade2 + pibcd2 + pibpercaptadc2 + areacd2 + densidadeinversacd2;
+    superpodercarta2 = (float)nptcd2 + (float)populacaoCidade2 + pibcd2 + pibpercaptadc2 + areacd2 + densidadeinversacd2;
 
     // ===== IMPRESSÃO =====
     printf("\nCarta 1:\n");
@@ -129,4 +126,3 @@ int main()
 
     return 0;
 }
-
